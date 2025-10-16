@@ -780,9 +780,11 @@ To request a JWT token in Postman, follow these steps:
 
 | Key        | Value                                                                 |
 |------------|-----------------------------------------------------------------------|
-| client_id  | http://stoettesystemerne.dk/service/organisation/3                    |
+| client_id  | Use the UUID of your It-system from the Administration Module, example: ba537e12-8b0c-44b1-9de7-f75803a4e091                    |
 | grant_type | client_credentials                                                    |
 | scope      | entityid:http://stoettesystemerne.dk/service/organisation/3,anvenderkontekst:11111111 |
+
+> **Note**: The `client_id` must always match the UUID of the It-system as listed in the Administration Module under **It-systemer → Stamdata → UUID**. This ensures that the OAuth token is issued for the correct client.
 
 4. **Token for a Different CVR**:
     - If you need a token for a different CVR, change the `anvenderkontekst` value in the scope.
